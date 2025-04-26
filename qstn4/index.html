@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.year').forEach(function (element) {
+          element.innerText = new Date().getFullYear();
+        });
+      });
+    </script>
+    <title>Campus Radio</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #0b0b0b;
+        font-size: 1rem;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .header-section {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+        line-spacing: 10px;
+        padding: 1.5rem 1rem;
+      }
+      .tagline {
+        font-size: small;
+      }
+      .heading-text {
+        font-weight: 600;
+        font-size: xx-large;
+        line-height: 1rem;
+        letter-spacing: 0.15rem;
+      }
+      .bg-grey {
+        background-color: #3e3e3e;
+        padding: 1rem;
+        margin: 1rem 2rem;
+        border-radius: 0.5rem;
+      }
+      .bg-gradient {
+        background: #a36565;
+        padding: 2rem;
+        margin: 1rem 2rem;
+        border-radius: 0.5rem;
+        background: linear-gradient(
+          90deg,
+          rgba(163, 101, 101, 1) 0%,
+          rgba(230, 50, 50, 1) 39%,
+          rgba(176, 93, 232, 1) 85%
+        );
+      }
+      .border-left {
+        border-left: 0.3rem solid rgb(245, 41, 41);
+      }
+      .border-left span {
+        text-transform: uppercase;
+      }
+      ul {
+        list-style: none;
+        font-size: small;
+        margin: 0.5rem 0rem;
+      }
+      ul li {
+        margin-bottom: 0.2rem;
+      }
+      .schedule ul li:first-child {
+        color: rgb(147, 113, 241);
+      }
+      .schedule ul li:nth-child(2) {
+        font-weight: bold;
+      }
+      .upcoming-events ul li:first-child {
+        font-weight: bold;
+      }
+      .upcoming-events ul li:nth-child(2) {
+        font-size: x-small;
+      }
+      .text-red {
+        color: rgb(245, 41, 41);
+        font-style: italic;
+      }
+      .heading-red {
+        color: rgb(245, 41, 41);
+      }
+      .divider {
+        padding: 0.5rem 0rem;
+        margin: 0rem 2rem;
+        border-bottom: 1px solid rgb(245, 41, 41);
+      }
+      .top10 li {
+        background-color: #535353;
+        padding: 0.4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-section bg-gradient">
+      <span class="heading-text">CampusFM 101.8</span>
+      <p class="tagline">&quot;Your Campus, Your Music, Your Vibe&quot;</p>
+    </header>
+    <div class="bg-grey border-left">
+      <span>now playing</span>
+      <ul>
+        <li>14:00 - 16:00</li>
+        <li class="text-red">DJ Pulse - Afternoon Drive</li>
+        <li>Genre: Urban Contemporary</li>
+      </ul>
+    </div>
+    <div class="divider">
+      <h4 class="heading-red">Today's Schedule</h4>
+    </div>
+    <div class="schedule">
+      <ul class="bg-grey">
+        <li>06:00 - 09:00</li>
+        <li>Morning Motivation with DJ Dawn</li>
+        <li>Genere: Pop & Talk</li>
+        <li>@djdawn_campus</li>
+      </ul>
+      <ul class="bg-grey">
+        <li>09:00 - 12:00</li>
+        <li>Campus Buzz with Alex</li>
+        <li>Genere: Talk & News</li>
+        <li>@alextalks</li>
+      </ul>
+      <ul class="bg-grey">
+        <li>12:00 - 14:00</li>
+        <li>Lunch Beat with DJ Fresh</li>
+        <li>Genere: Hip Hop & RnB</li>
+        <li>@freshbeats</li>
+      </ul>
+      <ul class="bg-grey">
+        <li>14:00 - 16:00</li>
+        <li>Afternoon Drive with DJ Pulse</li>
+        <li>Genre: Urban Contemporary</li>
+        <li>@djpulse_official</li>
+      </ul>
+      <ul class="bg-grey">
+        <li>16:00 - 17:00</li>
+        <li>Evening Mix with Sarah</li>
+        <li>Genre: Alternative & Indie</li>
+        <li>@sarahspins</li>
+      </ul>
+    </div>
+    <div class="bg-grey">
+      <span>Top 10 This Week</span>
+      <ul class="top10">
+        <li>Drake - First Person Shooter</li>
+        <li>Taylor Swift - Cruel Summer</li>
+        <li>21 Savage - redrum</li>
+        <li>SZA - Snooze</li>
+        <li>The Weekend - Popular</li>
+        <li>Doja Cat - Paint The Town Red</li>
+        <li>Travis Scott - MELOWN</li>
+        <li>Nicki Minaj - Last Time I Saw You</li>
+        <li>Post Malone - Chemical</li>
+        <li>Ice Spice - Think U The Shit (Fart)</li>
+      </ul>
+    </div>
+    <div class="upcoming-events">
+      <ul class="bg-grey">
+        <li>Artist Interview: Local Rapper "Verse"</li>
+        <li>Tomorrow @ 15:00</li>
+      </ul>
+      <ul class="bg-grey">
+        <li>Live Campus Concert</li>
+        <li>This Friday @ 18:00</li>
+      </ul>
+      <ul class="bg-grey">
+        <li>DJ Workshop</li>
+        <li>Saturday @ 14:00</li>
+      </ul>
+    </div>
+  </body>
+</html>
