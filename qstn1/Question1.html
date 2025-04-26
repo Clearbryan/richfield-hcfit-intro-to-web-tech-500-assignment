@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.year').forEach(function (element) {
+          element.innerText = new Date().getFullYear();
+        });
+      });
+    </script>
+    <title>Gamers Unite</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #0b0b0b;
+        font-size: 1rem;
+        color: #fff;
+        font-family: 'Poppins', serif;
+      }
+
+      .header-section {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+        line-spacing: 10px;
+      }
+
+      h3.heading {
+        font-weight: 700;
+        font-size: 1.7rem;
+      }
+
+      .heading-red {
+        color: rgb(245, 41, 41);
+      }
+
+      p.subheading {
+        font-weight: 600;
+      }
+
+      .categories {
+        margin: 1rem 2rem;
+      }
+
+      .categories ol {
+        padding: 1rem;
+        margin: 1rem 0rem;
+        border-top: 1px solid rgb(245, 41, 41);
+      }
+
+      .requirements ol {
+        padding: 1rem;
+        margin: 1rem 0rem;
+      }
+
+      .text-blue {
+        color: rgb(76, 202, 234);
+        margin-left: 2.5rem;
+      }
+
+      .text-gold {
+        color: rgb(243, 186, 61);
+      }
+
+      .text-600 {
+        font-weight: 600;
+      }
+
+      .list-item {
+        margin-left: 2.5rem;
+      }
+
+      .list-item-2 {
+        margin-left: 5rem;
+      }
+
+      .bg-grey {
+        background-color: #3e3e3e;
+        padding: 2rem;
+        margin: 1rem 2rem;
+        border-radius: 0.5rem;
+      }
+
+      .requirements p {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+
+      .m-auto {
+        margin: 0px 0.5rem 0px 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-section bg-grey">
+      <h3 class="heading heading-red">
+        GamersUnite <span class="year"></span>: Campus Championship
+      </h3>
+      <p class="subheading text-blue">
+        15 - 17 March <span class="year"></span>
+      </p>
+      <p class="tagline">&quot;Battle for the Ultimate Gaming Glory&quot;</p>
+    </header>
+
+    <section class="categories bg-grey">
+      <h4 class="heading-red">Tournament Games &amp; Prize Pools</h4>
+      <ol class="text-blue">
+        <li>
+          Fortnite
+          <ul>
+            <li class="text-blue">Solo Division - R2000 Prize Pool</li>
+            <li class="text-blue">Squad Division - R5000 Prize Pool</li>
+          </ul>
+        </li>
+        <li>
+          FIFA 24
+          <ul>
+            <li class="text-blue">1v1 Knockout Tournament</li>
+            <li class="text-blue">Prize Pool: R3000</li>
+          </ul>
+        </li>
+        <li>
+          Call of Duty: Warzone
+          <ul>
+            <li class="text-blue">Squad Battles (4 - player teams)</li>
+            <li class="text-blue">Prize Pool: R3000</li>
+          </ul>
+        </li>
+        <li>
+          Mortal Kombat 12
+          <ul>
+            <li class="text-blue">Double Elimination Bracket</li>
+            <li class="text-blue">Prize Pool: R2500</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="requirements bg-grey">
+      <h4 class="heading">Tournament Details</h4>
+      <p>Registration Requirements</p>
+      <ul>
+        <li class="list-item">Valid Student ID</li>
+        <li class="list-item">Gaming Handle/Username</li>
+        <li class="list-item">Discord/Username</li>
+      </ul>
+      <p>Equipment</p>
+      <ul>
+        <li class="list-item">Provided</li>
+        <ul>
+          <li class="list-item-2">Gaming PCs (RTX 4060, 32GB RAM)</li>
+          <li class="list-item-2">PS5 Consoles</li>
+          <li class="list-item-2">Gaming Monitors</li>
+        </ul>
+        <li class="list-item">Bring Your Own</li>
+        <ul>
+          <li class="list-item-2">Headphones</li>
+          <li class="list-item-2">Controllers (if preferred)</li>
+        </ul>
+      </ul>
+      <p>Schedule</p>
+      <ul>
+        <li class="list-item">Day 1: Qualifiers (All Games)</li>
+        <li class="list-item">Day 2: Semi-Finals</li>
+        <li class="list-item">Day 3: Finals & Prize Ceremony</li>
+      </ul>
+      <p>Grand Prize</p>
+      <p class="text-gold text-600">
+        <i class="fa-solid fa-trophy m-auto"></i> PlayStation 5 + R10,000 Cash
+        Prize for Overall Champion <i class="fa-solid fa-trophy m-auto"></i>
+      </p>
+    </section>
+  </body>
+</html>

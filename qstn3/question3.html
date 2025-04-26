@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Phone Comparison</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.year').forEach(function (element) {
+          element.innerText = new Date().getFullYear();
+        });
+      });
+    </script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+        color: #403f3f;
+        background-color: #fafafa;
+      }
+
+      .heading {
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 0.5rem;
+        background-color: white;
+      }
+      .sub-heading {
+        margin-top: 2rem;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-600 {
+        font-weight: 600;
+      }
+      .text-700 {
+        font-weight: 700;
+      }
+      .text-large {
+        font-size: 2.5rem;
+      }
+      .text-sm {
+        font-size: 1.5rem;
+      }
+
+      .table-wrapper {
+        display: flex;
+        justify-content: center;
+        overflow-x: auto;
+        margin-top: 0.5rem;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 90rem;
+        min-width: 60rem;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #38d92c;
+        color: #323131;
+        font-weight: 700;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      @media (max-width: 768px) {
+        table {
+          min-width: 100%;
+          font-size: 0.9rem;
+        }
+
+        th,
+        td {
+          padding: 10px;
+        }
+
+        .text-large {
+          font-size: 2rem;
+        }
+
+        .text-sm {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <p class="text-center text-600 text-large">
+        Top Student Phones Under R5000
+      </p>
+      <p class="sub-heading text-center text-sm">
+        Smartphone Comparison Guide <span class="year"></span>
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr class="table-heading">
+              <th>Model</th>
+              <th>Screen</th>
+              <th>Camera</th>
+              <th>Battery</th>
+              <th>Storage</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-row">
+              <td>Samsung Galaxy A24</td>
+              <td>6.5" AMOLED</td>
+              <td>50MP + 8MP + 2MP</td>
+              <td>5000mAh</td>
+              <td>128GB</td>
+              <td>R4899</td>
+            </tr>
+            <tr class="table-row">
+              <td>Xiaomi Redmi Note 12</td>
+              <td>6.67" AMOLED</td>
+              <td>48MP + 8MP + 2MP</td>
+              <td>5000mAh</td>
+              <td>128GB</td>
+              <td>R4599</td>
+            </tr>
+            <tr class="table-row">
+              <td>OPPO A78</td>
+              <td>6.43" AMOLED</td>
+              <td>64MP + 2MP</td>
+              <td>4500mAh</td>
+              <td>256GB</td>
+              <td>R4999</td>
+            </tr>
+            <tr class="table-row">
+              <td>Huawei Nova Y70</td>
+              <td>6.75" LCD</td>
+              <td>48MP + 5MP + 2MP</td>
+              <td>6000mAh</td>
+              <td>128GB</td>
+              <td>R4799</td>
+            </tr>
+            <tr class="table-row">
+              <td>Motorola G32</td>
+              <td>6.5" LCD</td>
+              <td>50MP + 8MP + 2MP</td>
+              <td>5000mAh</td>
+              <td>128GB</td>
+              <td>R4299</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
