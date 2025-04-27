@@ -25,7 +25,6 @@
       }
 
       .form-wrapper {
-        height: 100vh;
         display: flex;
         flex-direction: column;
       }
@@ -132,7 +131,7 @@
       <div class="bg-light-grey">
         <p class="customer-section text-600">Order Selection</p>
         <div class="form-group mb-3">
-          <select class="form-select mb-2">
+          <select class="form-select mb-2" name="foodTruck">
             <label for="foodTruck" class="form-label text-500"
               >Select Food Truck:</label
             >
@@ -229,7 +228,7 @@
       <div class="bg-light-grey">
         <p class="customer-section text-600">Order Details</p>
         <div class="form-group mb-3">
-          <select class="form-select mb-2">
+          <select class="form-select mb-2" name="pickUpTime">
             <label for="pickUpTime" class="form-label text-500"
               >Pickup Time:</label
             >
@@ -279,7 +278,7 @@
         </div>
         <div class="mb-1">
           <div class="form-group">
-            <label for="extras" class="form-label text-500"
+            <label for="notificationPreference" class="form-label text-500"
               >Notification Preference:</label
             >
           </div>

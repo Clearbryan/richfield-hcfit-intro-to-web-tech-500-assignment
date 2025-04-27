@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <title>Campus Culture</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.year').forEach(function (element) {
+          element.innerText = new Date().getFullYear();
+        });
+      });
+    </script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+        color: #403f3f;
+        background-color: #fafafa;
+      }
+
+      .header-section {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+      }
+      .heading-text {
+        font-weight: 600;
+        font-size: xx-large;
+        line-height: 1rem;
+        letter-spacing: 0.1rem;
+      }
+      .form-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+      .bg-light-grey {
+        width: 50%;
+        align-self: center;
+        align-items: center;
+        padding: 2rem;
+        margin: 1rem 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 15px 0px #f5f3f3;
+        clip-path: inset(-5px -5px -5px -5px);
+      }
+
+      .sub-heading {
+        margin-top: 1.5rem;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-600 {
+        font-weight: 600;
+      }
+      .text-500 {
+        font-weight: 500;
+      }
+      .text-700 {
+        font-weight: 700;
+      }
+      .text-large {
+        font-size: 2.5rem;
+      }
+      .text-medium {
+        font-size: 2rem;
+      }
+      .text-sm {
+        font-size: 1.5rem;
+      }
+      .text-normal {
+        font-size: 1rem;
+      }
+      .text-xs {
+        font-size: 0.5rem;
+      }
+      .text-dark-blue {
+        color: rgb(56, 21, 105);
+      }
+      p.customer-section {
+        border-bottom: 1px solid rgb(56, 21, 105);
+        padding-bottom: 0.5rem;
+      }
+      span.required {
+        color: rgb(245, 41, 41);
+      }
+      button {
+        width: 8rem;
+        border: none;
+        border-radius: 0.2rem;
+        padding: 0.4rem;
+        margin: 0 1rem 1rem 0;
+        color: #fff;
+      }
+      .btn-green {
+        background-color: rgb(62, 155, 62);
+      }
+      .btn-block {
+        width: 100%;
+        height: 3rem;
+        margin: 1rem 0rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-section">
+      <span class="heading-text text-dark-blue"
+        >CultureFest <span class="year"></span> Registration</span
+      >
+      <p class="text-normal sub-heading">
+        Showcase Your Talent at the Biggest Campus Cultural Event
+      </p>
+    </header>
+    <form class="form-wrapper mb-1">
+      <div class="bg-light-grey">
+        <p class="customer-section text-600">Participant Information</p>
+        <div class="mb-2">
+          <label for="fullName" class="form-label text-500"
+            >Full Name <span class="required">*</span></label
+          >
+          <input name="fullName" type="text" class="form-control" required />
+        </div>
+        <div class="mb-2">
+          <label for="studentName" class="form-label text-500"
+            >Student Number <span class="required">*</span></label
+          >
+          <input name="studentName" type="text" class="form-control" required />
+        </div>
+        <div class="mb-2">
+          <label for="email" class="form-label text-500"
+            >Email <span class="required">*</span></label
+          >
+          <input name="email" type="email" class="form-control" required />
+        </div>
+        <div class="mb-2">
+          <label for="phoneNumber" class="form-label text-500"
+            >Phone Number<span class="required">*</span></label
+          >
+          <input
+            maxlength="10"
+            name="phoneNumber"
+            type="text"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="mb-2">
+          <label for="teamName" class="form-label text-500"
+            >Team/Group Name (If applicable)
+          </label>
+          <input name="teamName" type="text" class="form-control" />
+        </div>
+        <div class="mb-2">
+          <label for="profilePicture" class="form-label text-500"
+            >Profile Picture</label
+          >
+          <input
+            accept="image/png, image/gif, image/jpeg"
+            name="profilePicture"
+            type="file"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="bg-light-grey">
+        <p class="customer-section text-600">Performance Details</p>
+        <div class="mb-2">
+          <label for="performanceCategory" class="form-label text-500"
+            >Performance Category <span class="required">*</span></label
+          >
+          <select class="form-select mb-2" name="performanceCategory">
+            <option selected>Select category</option>
+            <option value="Solo">Solo</option>
+            <option value="Group">Group</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="duration" class="form-label text-500"
+            >Performance Duration (minutes) <span class="required">*</span>
+          </label>
+          <input name="duration" type="number" class="form-control" required />
+        </div>
+        <div class="mb-2">
+          <div class="form-group">
+            <label for="equipmentChecklist" class="form-label text-500"
+              >Equipment Checklist</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="microphone"
+              value="Microphone"
+            />
+            <label class="form-check-label" for="microphone">Microphone</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="speakers"
+              value="Speakers"
+            />
+            <label class="form-check-label" for="speakers">Speakers</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="instruments"
+              value="Instruments"
+            />
+            <label class="form-check-label" for="instruments"
+              >Instruments</label
+            >
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <div>
+            <label class="form-check-label text-500" for="technicalRequirements"
+              >Technical Requirements</label
+            >
+          </div>
+          <textarea
+            name="technicalRequirements"
+            class="form-control"
+            rows="2"
+          ></textarea>
+        </div>
+        <div class="form-group mb-2">
+          <div>
+            <label class="form-check-label text-500" for="stageSetup"
+              >Stage Setup Preference</label
+            >
+          </div>
+          <textarea name="stageSetup" class="form-control" rows="2"></textarea>
+        </div>
+      </div>
+
+      <div class="bg-light-grey">
+        <p class="customer-section text-600">Additional Requirements</p>
+        <div class="mb-2">
+          <label for="fullName" class="form-label text-500"
+            >Rehearsal Slot Booking <span class="required">*</span></label
+          >
+          <select class="form-select mb-2" name="rehearsalSlot" required>
+            <option value="">Select Rehearsal Slot</option>
+            <option value="morning">Morning (9:00 AM - 11:00 AM)</option>
+            <option value="midday">Midday (12:00 PM - 2:00 PM)</option>
+            <option value="afternoon">Afternoon (3:00 PM - 5:00 PM)</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="emergencyContact" class="form-label text-500"
+            >Emergency Contact Number<span class="required">*</span></label
+          >
+          <input
+            maxlength="10"
+            name="emergencyContact"
+            type="text"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group mb-2">
+          <div>
+            <label class="form-check-label text-500" for="customerMerchOrder"
+              >Custom Merch Order</label
+            >
+          </div>
+          <textarea
+            name="customerMerchOrder"
+            class="form-control"
+            rows="2"
+          ></textarea>
+        </div>
+        <div class="mb-2">
+          <div class="form-group">
+            <label for="mediaConsent" class="form-label text-500"
+              >Media Consent <span class="required">*</span></label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="mediaConsent"
+              value="mediaConsent"
+            />
+            <label class="form-check-label" for="mediaConsent"
+              >Consent to Media Terms</label
+            >
+          </div>
+        </div>
+        <div class="mb-2">
+          <div class="form-group">
+            <label for="performanceRules" class="form-label text-500"
+              >Accept Performance Rules <span class="required">*</span></label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="acceptPerformanceRules"
+              value="acceptPerformanceRules"
+            />
+            <label class="form-check-label" for="acceptPerformanceRules"
+              >Accept Performance Rules
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn-green btn-block">Register</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
