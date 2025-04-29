@@ -4,4 +4,4 @@ This file repository contains solutions for Richfiled Graduate Institute of Tech
 ## Module
 Intro to Web Tech 500
 ## Langauges
-HtML, Css
+HTML, Css
